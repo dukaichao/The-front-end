@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内置对象之String</title>
+		<script>
+			var str1 = "abcbbsbskdkasdja";
+			var str2 = "a";
+			document.write("结果:"+(str1 == str2)+"<br />");
+			document.write(str1.fontcolor("red",5,7)+"<br />");
+			document.write(str1.substring(5).fontcolor("red")+"<br />");
+			document.write(str1.substr(5,4).fontcolor("red")+"<br />");
+			document.write("<hr />");
+			//定义字符串数组
+			var str = "java,c,c++,js,php,c#";
+			var stra = str.split(",");
+			for(int i = 0;i<stra.length;i++){
+				document.write(stra[i])
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

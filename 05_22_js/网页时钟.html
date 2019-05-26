@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		当前系统时间为:<span id="id"></span>
+	</body>
+	<script>
+		function getNewDate(){
+			var date = new Date();
+			var strDate = date.getFullYear()+"-"
+				+(date.getMonth()+1)+"-"
+				+date.getDate()+"&nbsp;&nbsp;"
+				+date.getHours()+":"
+				+date.getMinutes()+":"
+				+date.getSeconds();
+			var span = document.getElementById("id");
+			span.innerHTML = "<h1>"+strDate+"</h1>";
+		}
+		//设置一个定时器
+		/**
+		 * window.setInterval("任务（）",毫秒值) ：每经过多少毫秒后重复任务（）
+		 * window.setTimeout("任务（）"，毫秒值)：经过多少毫秒执行一次任务（）
+		 */
+		setInterval("getNewDate()",1000) ;
+	</script>
+</html>

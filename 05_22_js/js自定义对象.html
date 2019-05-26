@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js自定义对象</title>
+		<script>
+/**
+ * 自定义对象:4种方式   
+ * 	1)类似java有参构造形式
+ *     定义对象:function 对象(属性){...}
+ *        定义方法
+ * 	      创建对象
+ *     var 对象名 = new 对象(实际参数) ;
+ * 
+ * 2)类似java的无参形式
+ * 3)利用Object对象（所有js对象的模板）
+ * 4)json格式  （字面值的形式）
+ * 
+ * 	{"key"：value（Object）} 
+ *    
+ * 简单的格式：
+ * 	{"username":"张三","password":"123456"}
+ * 复杂的格式：json嵌套json (第三方的json工具：goson/fastjson/json-lib)
+ * {”key":{  
+ 	*      "key1” ：value1,
+ * 
+ * }
+ *   }
+ * 
+ */
+//方式1
+//定义对象
+/*function Person(name,age){
+	//追加属性
+	this.name = name ;
+	this.age =age ;
+	//追加方法
+	this.speak=function(){
+		alert("调用xxx说话的功能") ;
+	}
+}
+
+//创建对象
+var p = new Person("张三",18) ;
+document.write(p.age+" "+p.name+"<br />");*/
+
+			//方式2
+			//定义对象
+			function Person(){
+				
+			}
+			//创建对象
+			var p = new Person();
+			//追加属性
+			p.name = "张三";
+			p.age = 18;
+			document.write(p.age+" "+p.name+"<br />");
+			//追加方法
+			p.speak=function(){
+				alert("张三说:“鸡你太美");
+			}
+			p.speak();
+			
+			//方式3
+			//创建对象
+			var p = new Object();
+			//追加属性
+			p.name = "张三";
+			p.age = 18;
+			document.write(p.age+" "+p.name+"<br />");
+			//追加方法
+			p.speak=function(){
+				alert("张三说:“鸡你太美");
+			}
+			p.speak();
+			
+//方式4：json格式  （字面值的形式） （重点）
+/**
+ * 
+ * 前后端交互 的问题：
+ * 		后台给前端返回List/Map集合数据   
+ *    　后台传递前台页面之前：list集合/Map集合--->json格式(json对象)
+ * 		
+ */
+var p = {
+	"name":"zzc",
+	"age":18,
+	"speak":function(){
+		alert("asaa");
+	}
+};
+//输出属性
+document.write("姓名是:"+p.name+"<br/>") ;
+document.write("年龄是:"+p.age+"<br/>") ;
+//调用方法
+p.speak() ;
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
