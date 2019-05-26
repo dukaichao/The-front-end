@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css浮动属性</title>
+		<!--
+			CSS浮动属性:	
+				加载页面的时候，按照标签的先后顺序形成一个文档流
+			文档对象(document:js会用到),某个标签设置一个浮动属性(float)
+			如果设置浮动，那么就脱离了当前的文件流，然后后面的元素也随之改变
+			
+			清楚某个元素的浮动:
+				clear属性:both(左右两边都不重复)
+			
+		-->
+		<style>
+			body div{
+				float: left;
+			}
+			#clear{
+				/*设置div后面的元素不能随着div1属性浮动*/
+				/*clear:both:两边都不浮动
+				 		left:左边不浮动
+				 		right:右边不浮动*/
+				clear: both;
+			}
+			#id1{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				background-color: red;
+			}
+			#id2{
+				
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				background-color: blue;
+			}
+			#id3{
+				
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="id1">
+			用户名:<input type="text" />
+			密&nbsp;&nbsp;码:<input type="password" />
+		</div>
+		<div id="clear"></div>
+		<div id="id2">div2</div>
+		<div id="id3">div3</div>
+	</body>
+</html>

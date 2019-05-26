@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪类选择器的使用</title>
+		<style>
+			/*除过表头之外，鼠标经过的地方背景色变蓝色*/
+			/*tbody tr:hover{
+				background-color: #0000FF;
+			}*/
+			/*鼠标点击的部分变为红色*/
+			/*tbody tr:active{
+				background-color:red;
+			}*/
+			
+			/*鼠标经过每个单元格变成小手*/
+			tbody tr td:hover{
+				cursor: pointer;
+				background-color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1" cellspacing="0" align="center"
+			width="300px" height="300px">
+			<!--需求是:在表格中,鼠标经过的每一行有背景色变换(除了表头)
+				设置thead原因是，表格中有系统自定义的tbody，系统会自动将系统设置
+				的tbody和自己定义的tbody都会拆分，为了需求，
+				只能将表头用thead设置
+			-->
+			<thead>
+				<tr align="center">
+					<td>学号</td>
+					<td>姓名</td>
+					<td>成绩</td>
+				</tr>
+			</thead>
+			<!--给表格中设置拆分-->
+			<tbody>
+				<tr align="center">
+					<td>001</td>
+					<td>zzc</td>
+					<td>99</td>
+				</tr>
+				<tr align="center">
+					<td>002</td>
+					<td>dz</td>
+					<td>100</td>
+				</tr>
+				<tr align="center">
+					<td>003</td>
+					<td>zy</td>
+					<td>100</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

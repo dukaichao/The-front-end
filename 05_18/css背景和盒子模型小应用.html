@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css背景和盒子模型小应用</title>
+		<style>
+			#main{
+				width: 450px;
+				height: 300px;
+				background-color: white;
+				border: 3px solid black;
+				/*设置外边距*/
+				margin: 200px 0 0 420px;
+				/*设置背景图片*/
+				background-image: url(img/cs10002.jpg);
+				background-repeat: no-repeat;
+				background-position: top center;
+				
+			}
+			#inputusername{
+				margin: 60px 0 0 100px;
+			}
+			#inputpassword{
+				margin: 10px 0 0 100px;
+			}
+			
+			
+			#id{
+				float: left;
+				margin: 10px 20px 0 200px;
+			}
+			#btn{
+				margin-left: 30px;
+				margin: 10px 20px 0 20px;
+			}
+		</style>
+		<script>
+			function sub(){
+				alert("请注册")
+			}
+			function DL(){
+				alert("登录成功，是否保存密码")
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<form>
+				<div id="inputusername">
+					用户名:<input type="text" name="username" />
+				</div>
+				<div id="inputpassword">
+					密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd" />
+				</div>
+				<div id="id">
+					<input type="button" value="登录" onclick="DL()"/><input id= "btn" type="submit" value="注册" onclick="sub()"/>
+				</div>
+				
+			</form>
+		</div>
+	</body>
+</html>
