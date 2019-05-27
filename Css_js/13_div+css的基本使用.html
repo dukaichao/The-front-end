@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>div+css的基本使用</title>
+<style>
+	
+	/*
+	  分层布局:给当前标签使用div包裹 +标签的样式
+	  		页面的部分
+	  				导航栏
+	  				轮播图
+	 * */
+	/*修饰id="main"的div*/
+	#main{
+		width: 450px;
+		height: 300px;
+		/*显示边框*/
+		border: 1px solid #000;
+		
+		/*设置外边距
+		   简写属性:上  右 下 左
+		 * */
+		margin:200px 0 0 400px ;
+		
+		/*设置背景图片*/
+		background-image: url(img/1.jpg);
+		/*设置背景图像如何重复*/
+		background-repeat: no-repeat;
+		/*图像的起始位置*/
+		background-position: top center;
+	}
+
+/**
+ * 修饰id="user" 的div
+ */
+#user{
+	/*设置外边距*/
+	margin: 60px 0 0 100px;
+}
+
+/*设置密码框所在的div的外边距*/
+#pwd{
+	margin: 20px 0 0 100px;
+}
+/*设置密码框所在div的外边距*/
+#btn{
+	margin: 20px 0 0 150px;
+}
+
+/**
+ * 设置 id="reg_btn" 的标签的外边距
+ */
+#reg_btn{
+	margin-left: 30px;
+}
+
+/*
+ * 设置id="input_user"的用户名背景
+ */
+#input_user{
+	background-image: url(img/head.png);
+	background-repeat: no-repeat;
+	/*设置左内边距*/
+	padding-left: 28px;
+}
+/**
+ * id="input_pwd"的密码框的背景
+ */
+#input_pwd{
+	background-image: url(img/key.jpg);
+	background-repeat: no-repeat;
+	padding-left: 28px;
+}
+
+
+</style>
+
+	</head>
+	<body>
+<div id="main">
+<form action="#" method="post">
+	<div id="user">
+		用户名:<input type="text" id="input_user" />
+	</div>
+	<div id="pwd">
+		密&nbsp;&nbsp;&nbsp;码:<input type="password" id="input_pwd"/><br />
+	</div>
+	<div id="btn">
+		<input type="submit" value="登陆" /><input id="reg_btn" type="button" value="注册" />
+	</div>
+</form>
+</div>
+	</body>
+</html>

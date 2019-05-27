@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的运算符</title>
+<script>
+/**
+ * 算术运算符:+,-,*,/...
+ * 
+ * 
+ * 比较运算符:==,>=,<=,<,>...
+ * 逻辑运算符:&& || !
+ * 三元(三目)运算符
+ * 		表达式? true的结果:false的结构;
+ * 
+ */
+//js中:true:使用1来代替    false:0来代替
+var a = 10 ;
+var b = 12 ;
+document.write("(a+b):"+(a+b)+"<br/>") ;
+document.write("(a-b):"+(a-b)+"<br/>") ;
+document.write("(a*b):"+(a*b)+"<br/>") ;
+document.write("(a/b):"+(a/b)+"<br/>") ;
+document.write("<hr/>") ;
+document.write((a>=b)+"<br/>");
+document.write((a==b)+"<br/>");
+document.write((a<=b)+"<br/>");
+
+document.write("<hr/>") ;
+document.write((a==b) && (a<=b)+"<br/>") ;
+document.write("<hr/>") ;
+document.write((!true)+"<br/>") ;
+/*三元运算符*/
+var age = 12 ;
+document.write(age>=18?"成年人":"未成年人") ;
+
+	
+</script>
+	</head>
+	<body>
+	</body>
+</html>

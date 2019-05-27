@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的流程控制语句</title>
+<script>
+/**
+ * 顺序结构语句
+ * 选择结构语句
+ * 	if(表达式){
+ * 	
+ * }else{
+ * 	
+ * }
+ *    switch(表达式){
+ * 	   case 值1:    在js:Case后面的内容可以常量,变量,表达式..
+ *        语句1;
+ *     break ;
+ * ...
+ *     default:
+ *      语句n+1;
+ *     break;
+ * }
+ * 
+ *  循环结构:for,while,do-while
+ */
+//if结构语句
+/**
+ * 如果表达式是非空字符串,条件成立,否则条件不成立.
+ * 如果表示是非0的整数类型,条件成立,否则不成立
+ * 如果表达式是否true,成立,否则不成立
+ * 如果是非null的值,条件成立,否则不成立
+ */
+if(new Object()){
+	document.write("条件成立...");
+	//alert("条件成立...") ;
+}else{
+	//alert("条件不成立") ;
+	document.write("条件bu成立...");
+	
+}
+
+//switch语句
+/**
+ * 特点:
+ * 		1)switch语句的结束条件
+ *         a)遇见break结束
+ *         b)程序默认执行到末尾
+ * 		2)default语句可以在任何位置
+ *         如果在语句末尾:break可以省略/句中,不要省略
+ *      3)每一个case语句中,一定要带上break,防止:case穿透
+ * 
+ *     4)在js中,case后面的值可以跟变量.常量,表达式...   (java中只能是常量)
+ */
+var i = "b" ;
+var b = "b" ;
+switch(i){
+	/*default:
+	    
+	   //break ;*/
+	case "a":
+	   document.write("您选择了a<br/>") ;
+	break ;
+    case b:  
+    	document.write("您选择了b<br/>") ;
+	break ;
+	case "c":  
+    	document.write("您选择了c<br/>") ;
+	break ;
+	case "d":  
+    	document.write("您选择了d<br/>") ;
+	break ;
+}
+
+/**
+ * 循环结构语句
+ */
+for(var i = 0 ;i <3 ; i++){
+	document.write("helloworld<br/>") ;
+}
+
+//while循环
+/**
+ * 初始化语句;
+ * while(条件表达式){
+ * 	循环体语句;
+ *  步长语句;
+ * }
+ */
+var i = 1 ;
+while(i<=5){
+	document.write("Java培训哪家强,西安临潼找比特<br/>") ;
+	i ++ ;
+}
+
+/**
+ * do-while: 
+ *   特点:循环体至少执行一次
+ * 变形格式:
+ * 初始化语句;
+ * do{
+ *      循环体语句
+ *      步长语句;
+ * 
+ * }while(条件判断语句) ;
+ */
+var i =1 ;
+do{
+	document.write("高圆圆结婚了...<br/>") ;
+	i++ ;
+}while(i<=3) ;
+
+
+
+
+</script>
+	</head>
+<body>
+</body>
+</html>

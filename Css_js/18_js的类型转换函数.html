@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的类型转换函数</title>
+<script>
+	
+	/**
+	 * string--->整数 
+	 *     parseInt(变量名)
+	 * 	注意事项:
+	 * 	在转换的时候,遇到非数值类型的字符串停止转换
+	 * 
+	 * string-->小数
+	 *     parseFloat(变量名)
+	 */
+var a = "a10a" ;
+
+document.write("转换前，a的值是："+a+",数据类型是:"+typeof(a)+"<br/>") ;
+//转换
+a = parseInt(a) ;
+document.write("转换后，a的值是："+a+",数据类型是:"+typeof(a)+"<br/>") ;
+document.write("<hr/>");
+var b = "3.1415926" ;
+document.write("转换前，b的值是："+b+",数据类型是:"+typeof(b)+"<br/>") ;
+b= parseFloat(b) ;
+document.write("转换后，b的值是："+b+",数据类型是:"+typeof(b)+"<br/>") ;
+</script>
+	</head>
+	<body>
+	</body>
+</html>

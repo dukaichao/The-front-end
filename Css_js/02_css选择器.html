@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css选择器</title>
+		<style>
+			/*标签选择器*/
+			/*div{
+				font-size: 26px;
+				color: #F00;
+			}*/
+			
+			
+			/*类选择器*/
+			/*.c1{
+				font-size: 30px;
+				color: #00F;
+			}*/
+			
+			/*id选择器*/
+			/*#d1{
+				font-size: 36px;
+				color: #0F0;
+			}*/
+			
+			
+			/*并集选择器*/
+			/*.c1,#d1{
+				font-size: 35px;
+				color: #0F0;
+			}*/
+			
+			/*交集(子元素)选择器*/
+			/*.c1 span{
+				font-size: 30px;
+				color: #F00;
+			}*/
+			/*通配符选择器 *  */
+			*{
+				font-size: 30px;
+				color: #c90;
+			}
+		</style>
+<!--
+	
+	CSS选择器	:常用
+		标签选择器 
+				标签名称{
+					
+					css样式属性:css样式属性值;
+				}
+		class选择器(类选择器) :看需求是否使用class选择器
+		     注意:在同一个页面中,多个标签是可以指定同名class属性的
+				需要在标签中指定一个class属性
+				 样式中的格式
+				 		.class属性值{
+				 			css样式属性:css样式属性值;
+				 		}
+				 		
+				 		
+		id选择器(推荐)
+		     需要在标签中指定一个id属性
+		     	格式
+		     		#id属性值{
+		     			css样式属性:css样式属性值;
+		     		}
+		     		
+		     		注意:在同一个html页面中,多个标签不能指定同名的id属性值
+		     		页面中的所有的标签的id属性值应该唯一的
+		     		防止:document.getElementById("id属性值");获取不到标签对象的情况
+		
+		优先级:id选择器>类选择器>标签选择器
+		
+		其他的选择器:
+			并集选择器
+				selector1,selector2...{
+					
+					css样式属性:属性值;
+				}
+			交集(子元素)选择器
+				 格式:selector1 selector2...{
+				 	css样式属性:属性值;
+				 }
+				 	
+				
+			通配符选择器(*{css样式属性:属性值;})	
+					
+			
+			伪类选择器(单独说)
+-->
+	</head>
+<body>
+<div class="c1">div1<span>span标签</span></div>
+<div id="d1">div2</div>
+<div>div3</div>
+<span>span标签</span>
+</body>
+</html>

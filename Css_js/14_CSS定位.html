@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS定位</title>
+		<!--
+			
+			CSS定位有三种
+			   定位属性：position
+				1)绝对定位 :absolute
+				   当前元素针对父元素进行定位
+				2)相对定位:relative
+				      针对原来的元素位置进行定位方式
+				3)固定定位:fixed 
+						应用场景：
+							网站中弹出一个广告，广告内容会随着滚动条的滚动而滚动
+		-->
+<style>
+div{
+	width: 150px;
+	height: 150px;
+	border: 3px solid #000;
+}
+
+#div1{
+	background-color: #F00;
+}
+#div2{
+	background-color: #0F0;
+}
+#div3{
+	background-color: #00F;
+	
+	/*position进行定位*/
+	/*position: relative;*/
+	position: absolute;
+	left:20px ;
+	top:20px ;
+}
+
+#adv{
+	width: 200px;
+	height: 200px;
+	
+	border: 5px solid #000000;
+	
+	background-color: blue;
+	
+	/*固定定位*/
+	position: fixed;
+	left: 420px;
+	top: 200px;
+}
+</style>
+	</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容
+网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容网站内容
+网站内容网站内容网站内容网站内容
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br />
+<div id="adv"><a href="#" style="color: red;">立刻咨询立刻咨询立刻咨询立刻咨询立刻咨询</a></div>
+</body>
+</html>

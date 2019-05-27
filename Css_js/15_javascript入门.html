@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>javascript体验</title>
+<script>
+	function checkUserName(){
+		/*用户名的校验规则:由4-14位的数字或者字母组成*/
+		//document.getElementById("id属性值")获取标签对象
+		var username = document.getElementById("username") ;
+		//获取内容
+		username = username.value ;
+		//定义一个正则规则
+		var reg = /^[0-9a-zA-Z]{4,14}$/;
+		//使用正则校验获取username
+		if(!reg.test(username)){
+			alert("用户名格式不正确") ;
+			return false ;
+		}
+		return true ;
+	}
+	/*function testBlur(){
+				//获取用户内容
+				var username = document.getElementById("username").value;
+				//获取span标签
+				var span = document.getElementById("id");
+				//应该从数据库中获取信息
+				if(username!="dlklcx"){
+					span.innerHTML = "用户名符合规则".fontcolor("blue");
+				}else{
+					span.innerHTML = "用户名不符合规则"
+					.fontcolor("red");
+				}
+			}*/
+	function testBlur(){
+		var username = document.getElementById("username").value;
+		var span = document.getElementById("id");
+		if(username!="cxkcxk"){
+					span.innerHTML = "用户名符合规则".fontcolor("blue");
+				}else{
+					span.innerHTML = "用户名不符合规则"
+					.fontcolor("red");
+				}
+		if(username!="cxkcxk"){
+			span.innerHTML = "用户名符合规则".fontcolor("blue");
+		}else{
+			span.innerHTML = "用户名不符合规则".fontcolor("red");
+		}
+	}
+</script>
+	</head>
+	<body>
+		<!--onsubmit事件：表示表单提交是否成功
+			
+			 返回true：可以提交
+			 false，提交失败
+		-->
+		
+<form action="backend.html" method="post" onsubmit="return checkUserName()">
+用户名：<input type="text" id="username" name="name"
+	 onblur="testBlur()"/>
+	 <span id="id"></span><br />
+
+<input type="submit" value="注册" />
+</form>
+	</body>
+</html>

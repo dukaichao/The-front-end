@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本使用</title>
+		<style>
+			/*除过表头之外,鼠标经过每一行,背景色变成蓝色*/
+			/*tbody tr:hover{
+				background-color: blue;
+			}*/
+			tbody tr td:hover{
+				/*经过每一个单元格：变成小手状态*/
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+<table border="1" cellspacing="0" align="center" height="200px" width="300px">
+	<thead>
+	<tr>
+		<th>姓名</th>
+		<th>班级</th>
+		<th>成绩</th>
+	</tr>
+	</thead>
+	<!--给表格中设置拆分-->
+	<tbody>
+	<tr align="center">
+		<td>张三</td>
+		<td>软工1班</td>
+		<td>90</td>
+	</tr>
+	<tr align="center">
+		<td>李四</td>
+		<td>软工1班</td>
+		<td>80</td>
+	</tr>
+	<tr align="center">
+		<td>王五</td>
+		<td>软工1班</td>
+		<td>85</td>
+	</tr>
+	</tbody>
+</table>
+	</body>
+</html>

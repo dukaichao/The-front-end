@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS浮动属性</title>
+<style>
+	#d1{
+		width: 200px;
+		height: 200px;
+		/*边框的简写属性*/
+		border: 1px solid #000;
+		
+		background-color: #F00;
+		
+		/*
+		 css浮动属性：
+		    float ：left/rigth;
+		    一旦某个元素设置了浮动，不管是左浮动还是右浮动，都会脱离当前的
+		    文档流，（前提后面的元素没有设置浮动），后面的元素就会进向移动刚才的元素位置
+		     
+		 * */
+		float: left;
+	}
+	#d2{
+		width: 200px;
+		height: 200px;
+		/*边框的简写属性*/
+		border: 1px solid #000;
+		
+		background-color: #0F0;
+		
+		/*float: left;*/
+	}
+	
+	#d3{
+		width: 200px;
+		height: 200px;
+		/*边框的简写属性*/
+		border: 1px solid #000;
+		
+		background-color: #00F;
+		
+	
+	}
+	
+	#clear{
+		/*第一个div是一个左浮动
+		 想让后面的元素都不浮动
+		 
+		 	clear属性：both;(左右两边都不浮动)
+		 * */
+		clear: both;
+	}
+</style>
+	</head>
+	<body>
+<div id="d1">div1</div>
+<!--此处div-->
+<div id="clear"></div>
+<div id="d2">div2</div>
+<div id="d3">div3</div>
+	</body>
+</html>

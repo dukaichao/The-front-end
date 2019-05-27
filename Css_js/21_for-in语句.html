@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for-in语句</title>
+<script>
+	 
+	/*
+	 *  for-in语句类似于  java中的增强for循环
+	 * 
+	 *     java:迭代器:遍历集合  :接口:Iterator
+	 *       List<String>     list =new ArrayList<>() ;
+	 *       for(String s:list){
+	 * 	       System.out.println(s) ;
+	 *        }
+	 *        
+	 * 
+	 * for-in语句(简化数组和对象的遍历)的格式
+	 *   for(var 变量名 in 数组名称/对象名称)
+	 * */
+var arr = [10,20,30,40] ; //var arr = new Array(){具体的元素}
+for(var i = 0 ;  i< arr.length ;i++){
+	document.write(arr[i] +"&nbsp;") ;
+}
+document.write("<hr/>") ;
+
+//for-in语句
+for(var i in arr){
+	document.write(arr[i]+" ") ;
+}
+document.write("<hr/>") ;
+//js中定义对象:   定义一个Person对象
+function  Person(name,age){
+	//追加属性
+	this.name =name ;
+	this.age =age;
+	
+}
+
+//创建对象
+var p = new Person("张三",20) ;
+for(var j in p){
+	document.write(p[j]+"<br/>") ;
+}
+
+</script>
+	</head>
+	<body>
+	</body>
+</html>

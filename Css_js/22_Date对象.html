@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的内置对象--Date</title>
+<script>
+
+
+/**
+ * java--- Date类
+ * 		获取系统时间:Date date  = new Date() ;
+ * 				date:---  yyyy-MM-dd HH:mm:ss
+ *           SimpleDateFormat类:格式化(Date对象)/解析(日期字符串)
+ */
+//获取系统时间年份/月份/月份中的日期 时分秒
+//创建日期对象
+var date = new Date() ;
+document.write(date+"<br />") ;
+//Sat May 18 2019 17:15:57 GMT+0800 (中国标准时间)
+//获取年份
+/*var year = date.getYear() ;*/ //1900之间的差距
+var year = date.getFullYear();
+document.write(year+"年") ;
+var month = date.getMonth() ;
+//获取月份
+document.write((month+1)+"月")
+//月份中的日期
+document.write(date.getDate()+"日&nbsp;&nbsp;") ;
+//时
+document.write(date.getHours()+":") ;
+//分
+document.write(date.getMinutes()+":") ;
+//秒
+document.write(date.getSeconds()+"<br />") ;
+
+
+
+</script>
+	</head>
+	<body>
+	</body>
+</html>
