@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作业2</title>
+		<script>
+		var i = 1;
+			function addBtn(){
+				i++;
+				var last = document.getElementById("id");
+				//创建新的tr结点
+				var newNode=document.createElement("tr");
+				//table中使用了消除浮动，所以直接向tr追加
+	         	newNode.innerHTML="<th id="+i+
+	         	"class = 'action'>"+i+"</th>"+
+	         	"<th> <input type='text' /></th>"+
+	         	"<th><input type='password' /></th>"+
+	         	"<th><input type='button' value='添加' onclick='addBtn()' />"+
+	         	"<input type='button' value='删除' onclick='delBtn(this)' /></th>";
+         		last.appendChild(newNode);
+				
+			}
+			function delBtn(obj){
+				//获取当前obj的编号
+				var node = obj.parentNode.parentNode.firstChild;
+				var index = parseInt(node.id);
+				//由于第一个编号的属性类型为NAN，
+				//其他编号属性类型为number
+				//所以找到一个判断是否是NAN的方法
+				/*isNaN定义：
+				isNaN(x) 函数用于检查其参数是否是非数字值
+				返回值：如果 x 是特殊的非数字值 NaN（
+				或者能被转换为这样的值），返回的值就是 true。
+				如果 x 是其他值,则返回 false。*/
+				if(!isNaN(index)){
+					//获取table标签
+					var table=obj.parentNode.parentNode.parentNode;
+					//删除table标签中obj所在的tr标签
+           			table.removeChild(obj.parentNode.parentNode);
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form>
+		<table id="id" border="1px" cellspacing="0" style=" clear: both;">
+			<tr>
+				<th>编号</th>
+				<th>name</th>
+				<th>pwd</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<th id="1" class="action">
+					1
+				</th>
+				<th>
+					<input type="text" />
+				</th>
+				<th>
+					<input type="password" />
+				</th>
+				<th>
+					<input type="button" value="增加" onclick="addBtn()" />
+					<input type="button" value="删除" onclick="delBtn(this)"/>
+				</th>
+			</tr>
+		</table>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+			
+			checked:选中的一种状态
+					true:选中
+					falase:不选中
+		-->
+		<script>
+			function checkAll(){
+				//获取全选的属性和菜单项item的属性
+				var choice = document.getElementsByName("all");
+				var all = document.getElementsByName("item");
+				if(choice[0].checked == true || choice[1].checked == true){
+					for(var i = 0;i<all.length;i++){
+						all[i].checked = true;
+					}
+				}else {
+					for(var i = 0;i<all.length;i++){
+						all[i].checked = false;
+					}
+				}
+				//如果两个事件都被触发，那么全部置为false
+				if(choice[0].checked == true &&choice[1].checked == true ){
+					choice[0].checked = false;
+					choice[1].checked = false; 
+					for(var i = 0;i<all.length;i++){
+						all[i].checked = false;
+					}
+				}
+				
+			}
+			
+			function getSum(){
+				var all = document.getElementsByName("item");
+				var sum = 0;
+				for(var i = 0;i<all.length;i++){
+					if(all[i].checked == true){
+						sum =sum + parseInt(all[i].value);
+					}
+				}
+				sum = ""+sum;
+				var span = document.getElementById("sumid");
+				span.innerHTML = sum+"元".fontcolor("blue");
+			}
+		</script>
+		
+	</head>
+<body>
+	<div>商品列表</div>
+<input type="checkbox" name="all" onclick="checkAll(this)"  /> 全选<br />
+<input type="checkbox" name="item" value="3000" />笔记本电脑3000元<br />
+<input type="checkbox" name="item" value="3000"  />笔记本电脑3000元<br />
+<input type="checkbox" name="item" value="3000"  />笔记本电脑3000元<br />
+<input type="checkbox" name="item" value="3000"  />笔记本电脑3000元<br />
+<input type="checkbox" name="item" value="3000"  />笔记本电脑3000元<br />
+<input type="checkbox" name="item" value="3000"  />笔记本电脑3000元<br />
+<input type="checkbox" name="all" onclick="checkAll(this)"  /> 全选<br />
+<input type="button" value="总金额：" onclick="getSum()" />
+<span id="sumid"></span><br />
+</body>
+</html>
