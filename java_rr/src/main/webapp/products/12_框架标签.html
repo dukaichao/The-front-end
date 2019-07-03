@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>框架标签</title>
+		<!--
+			框架标签:frame标签   不能和body共存
+				一个frame中包含一个html页面:<frame src = "所含页面的路径" />
+				如果整个框架的组成不是一个html页面，由两个以上组成框架结构，必须使用frameset标签俩标签
+				框架集标签:frameset
+					属性:
+						rows:将框架横向划分，每个页面占整个部分的权重百分比
+						cols:竖向划分，每个页面占整个部分的权重百分比
+		-->
+	</head>
+	<!--
+		超链接的target
+			1)指定加载资源文件的打开方式
+			2)和frame中name属性值有关系
+	-->
+	<frameset rows="20%,70%,*">
+		<!--使用frame加载指定页面-->
+		<frame src="head.html" />
+		<frameset cols="20%,*">
+			<frame src="menu.html" />
+			<frame src="main.html" name="main" />
+		</frameset>
+		<frame src="foot.html" />
+	</frameset>
+	<body>
+	</body>
+</html>
