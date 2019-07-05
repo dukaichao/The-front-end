@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>210LV</title>
+    <!--<script>
+			/*用户名必须符合一定的规则:如果不正确，弹出提示框"用户名不正确"*/
+
+			function checkUsername(){
+				//获取用户内容
+				var username = document.getElementById("username").value;
+				//用户名要符合的规则:由4-14位数字和字母组成(不区分大小写)
+				var reg = /^[a-zA-Z0-9]{4,14}$/;
+				if(!reg.test(username)){
+					alert("用户名格式不正确");
+					return false;
+				}
+				return true;
+			}
+
+			function testBlur(){
+				//获取用户内容
+				var username = document.getElementById("username").value;
+				//获取span标签
+				var span = document.getElementById("id");
+				//应该从数据库中获取信息
+				if(username!="dlklcx"){
+					span.innerHTML = "用户名符合规则".fontcolor("blue");
+				}else{
+					span.innerHTML = "用户名不符合规则"
+					.fontcolor("red");
+				}
+			}
+		</script>-->
+</head>
+<body>
+<form action="/test" target="_self" method="get" >
+    用户名:<input type="text" name="name" placeholder="请输入用户名" /><br />
+    密&nbsp;&nbsp;&nbsp;码<input type="password" name="pwd" placeholder="请输入密码" /><br />
+    <input type="button" value="登录" />
+    <input type="submit" value="注册" />
+
+</form>
+</body>
+</html>
